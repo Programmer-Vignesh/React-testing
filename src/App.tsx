@@ -1,14 +1,36 @@
-import React from 'react';
-import './App.css';
-import Login from './components/Login/Login';
+import Greet from "./components/Greet/Greet";
+import "./App.css";
+import Person from "./components/PersonList/PersonList";
+import Status from "./components/Status/Status";
+import Heading from "./components/Heading/Heading";
+
+const nameList = [
+  {
+    first: "Bruce",
+    last: "Banner",
+  },
+  {
+    first: "Tony",
+    last: "Stark",
+  },
+  {
+    first: "Steve",
+    last: "Rogger",
+  },
+];
 
 function App() {
   return (
     <div className="App">
+      <Heading>
+        <h1>Welcome to codePractice site</h1>
+      </Heading>
       <header className="App-header">
         <h2>Learn Jest with React</h2>
       </header>
-      <Login/>
+      <Greet name="Vignesh" sessionCount={25} isLogged={false} />
+      <Person name={nameList} />
+      <Status status="loading" />
     </div>
   );
 }
