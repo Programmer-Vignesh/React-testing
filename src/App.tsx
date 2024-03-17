@@ -4,6 +4,7 @@ import Person from "./components/PersonList/PersonList";
 import Status from "./components/Status/Status";
 import Heading from "./components/Heading/Heading";
 import Counter from "./components/Counter/Counter";
+import Timer from "./components/Timer/Timer";
 
 const nameList = [
   {
@@ -33,6 +34,7 @@ function App() {
       <Person name={nameList} />
       <Counter />
       <Status status="loading" />
+      <Timer />
     </div>
   );
 }
